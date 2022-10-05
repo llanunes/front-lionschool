@@ -48,7 +48,7 @@ const renderNotas = (disciplina) => {
     if(disciplina.media <= 70 && disciplina.media >= 40){
         progressoNota.classList.add('yellow');
     } else if (disciplina.media < 40){
-        progressoNota.classList.add('red')
+        progressoNota.classList.add('red');
     }
     
     const inicialDisciplina = document.createElement('span');
