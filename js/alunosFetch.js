@@ -9,7 +9,7 @@ const getInformacaoAluno = async (matricula) => {
 }
 
 const getDisciplinas = async (matricula) => {
-    const url =  `http://localhost:8080/${matricula}/disciplinas`;
+    const url =  `https://api-larissa.netlify.app/.netlify/functions/api/${matricula}/disciplinas`;
     const response = await fetch(url);
     const { disciplinas } = await response.json()
 

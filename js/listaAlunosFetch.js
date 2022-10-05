@@ -1,7 +1,7 @@
 'use strict'
 
 const getAlunoPorCurso = async (curso) => {
-    const url =  `http://localhost:8080/alunos/curso/?curso=${curso}`;
+    const url =  `https://api-larissa.netlify.app/.netlify/functions/api/alunos/curso/?curso=${curso}`;
     const response = await fetch(url);
     const { listaAlunos } = await response.json();
 
@@ -9,7 +9,7 @@ const getAlunoPorCurso = async (curso) => {
 }
 
 const filtrarAlunoPorStatusEAnoDeConclusao = async (curso, status, conclusao) => {
-    const url = `http://localhost:8080/alunos/curso/?curso=${curso}&status=${status}&conclusao=${conclusao}`;
+    const url = `https://api-larissa.netlify.app/.netlify/functions/api/alunos/curso/?curso=${curso}&status=${status}&conclusao=${conclusao}`;
     const response = await fetch(url);
     const {listaAlunos} = await response.json();
 
@@ -17,7 +17,7 @@ const filtrarAlunoPorStatusEAnoDeConclusao = async (curso, status, conclusao) =>
 }
 
 const filtrarAlunoPorStatus = async (curso, status) => {
-    const url = `http://localhost:8080/alunos/curso/?curso=${curso}&status=${status}`;
+    const url = `https://api-larissa.netlify.app/.netlify/functions/api/alunos/curso/?curso=${curso}&status=${status}`;
     const response = await fetch(url);
     const {listaAlunos} = await response.json();
 
@@ -25,7 +25,7 @@ const filtrarAlunoPorStatus = async (curso, status) => {
 }
 
 const getAnos = async (curso, conclusao) => {
-    const url =  `http://localhost:8080/alunos/curso/?curso=${curso}&conclusao=${conclusao}`;
+    const url =  `https://api-larissa.netlify.app/.netlify/functions/api/alunos/curso/?curso=${curso}&conclusao=${conclusao}`;
     const response = await fetch(url);
     const {listaAlunos} = await response.json();
 
